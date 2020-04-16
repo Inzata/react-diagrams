@@ -1,11 +1,11 @@
 {
-	"name": "@projectstorm/geometry",
-	"version": "6.0.4",
+	"name": "@inzata/geometry",
+	"version": "6.0.5",
 	"author": "dylanvorster",
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/projectstorm/react-diagrams.git"
+		"url": "https://github.com/inzata/react-diagrams.git"
 	},
 	"scripts": {
 		"clean": "rimraf ./dist",
