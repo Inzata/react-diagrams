@@ -72,6 +72,7 @@ export class DragNewLinkState extends AbstractDisplacementState<DiagramEngine> {
 							this.link.setTargetPort(model);
 							model.reportPosition();
 							this.engine.repaintCanvas();
+							this.engine.getModel().fireEvent( {link: this.link}, 'fullLinkCreated' );
 							return;
 						}
 					}

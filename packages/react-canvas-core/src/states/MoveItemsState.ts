@@ -31,6 +31,20 @@ export class MoveItemsState<E extends CanvasEngine = CanvasEngine> extends Abstr
 				}
 			})
 		);
+		this.registerAction(
+			new Action({
+				type: InputType.MOUSE_DOWN,
+				fire: (event: ActionEvent<React.MouseEvent>) => {
+					// const element = this.engine.getActionEventBus().getModelForEvent(event);
+					// if (!element.isSelected()) {
+					// 	this.engine.getModel().clearSelection();
+					// }
+					// element.setSelected(true);
+					// this.engine.repaintCanvas();
+					this.engine.getModel().fireEvent( {entities: this.engine.getModel().getSelectedEntities(), event: event }, 'nodeMoved' );
+				}
+			})
+		);
 	}
 
 	activated(previous: State) {
